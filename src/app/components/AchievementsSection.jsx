@@ -12,18 +12,20 @@ const AnimatedNumbers = dynamic(
 const achievementsList = [
   {
     metric: "Projects",
-    value: "30",
+    value: "20",
+    postfix: "+",
   },
   {
+    prefix: "~",
     metric: "users",
+    value: "10",
+  },
+  {
+    metric: "Certificates",
     value: "0",
   },
   {
-    metric: "awards",
-    value: "0",
-  },
-  {
-    metric: "years",
+    metric: "Education",
     value: "1",
   },
 ];
@@ -38,8 +40,22 @@ const AchievementsSection = () => {
               key={index}
               className="flex flex-col items-center justify-center mx-4"
             >
-              <h2 className="text-white text-4xl font-bold">
-                {achievement.value}
+              <h2 className="text-white text-4xl font-bold flex flex-row">
+                {achievement.prefix}
+                <AnimatedNumbers
+                  includeComma
+                  animateToNumber={parseInt(achievement.value)}
+                  locale="en-US"
+                  className="text-white text-4xl font-bold"
+                  configs={(_, index) => {
+                    return {
+                      mass: 1,
+                      friction: 100,
+                      tension: 140 * (index + 1),
+                    };
+                  }}
+                />
+                {achievement.postfix}
               </h2>
               <p className="text-[#ADB7DE] text-base">{achievement.metric}</p>
             </div>

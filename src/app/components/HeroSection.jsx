@@ -1,14 +1,19 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sg:grid-cols-12">
-        <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I'm{" "}
@@ -34,7 +39,7 @@ const HeroSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
             pariatur voluptas.
           </p>
-        </div>
+        </motion.div>
         <div>
           <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-500 via-secondary-500 to-purple-500 hover:bg-slate-200 text-white">
             Hire Me
