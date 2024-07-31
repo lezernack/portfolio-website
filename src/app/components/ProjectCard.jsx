@@ -3,6 +3,7 @@ import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+  console.log(imgUrl);
   return (
     <div>
       <div

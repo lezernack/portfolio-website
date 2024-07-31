@@ -8,7 +8,8 @@ const projectsData = [
     id: 1,
     title: "React Portfolio Website",
     description: "Project 1 description",
-    image: "/images/projects/1.png",
+    image: "/projects/1.png",
+    alt: "project 1",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/lezernack/portfolio-website",
     previewUrl: "/",
@@ -67,7 +68,7 @@ const ProjectsSection = () => {
         />
       </div>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project) => (
+        {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}
