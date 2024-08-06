@@ -1,32 +1,31 @@
 "use client";
 import React, { useState } from "react";
-import ProjectCard from "./ProjectCard.jsx";
-import ProjectTag from "./ProjectTag.jsx";
+import ProjectCard from "./ProjectCard";
+import ProjectTag from "./ProjectTag";
 
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/projects/1.png",
-    alt: "project 1",
+    title: "Portfolio Website",
+    description: "A website full of my projects",
+    image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/lezernack/portfolio-website",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Memory Game",
-    description: "Project 2 description",
+    title: "Memory game",
+    description: "A fun little matching game",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/lezernack/memoryGame",
-    previewUrl: "/",
+    previewUrl: "https://lezernack.github.io/memoryGame/",
   },
   {
     id: 3,
-    title: "Recipe finder",
-    description: "Project 3 description",
+    title: "Recipe Website",
+    description: "A website connected to a database of recipes",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/lezernack/ReactJS_Recipe",
@@ -41,13 +40,13 @@ const ProjectsSection = () => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) => {
-    project.tag.includes(tag);
-  });
+  const filterProjects = projectsData.filter((project) =>
+    project.tag.includes(tag)
+  );
 
   return (
-    <section className="my-8 md:my-12">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <>
+      <h2 className="text-center text-4xl font-bold text-white mt-4">
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
@@ -68,7 +67,7 @@ const ProjectsSection = () => {
         />
       </div>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {projectsData.map((project) => (
+        {filterProjects.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}
@@ -79,7 +78,7 @@ const ProjectsSection = () => {
           />
         ))}
       </div>
-    </section>
+    </>
   );
 };
 
