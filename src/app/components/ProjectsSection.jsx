@@ -53,7 +53,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section ref={ref}>
+    <section>
       <h2 className="text-center text-4xl font-bold text-white mt-4">
         My Projects
       </h2>
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            transition={{ duration: 1, delay: index * 0.4 }}
           >
             <ProjectCard
               key={project.id}

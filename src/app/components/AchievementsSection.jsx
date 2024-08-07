@@ -22,10 +22,10 @@ const achievementsList = [
   },
   {
     metric: "Certificates",
-    value: "0",
+    value: "2",
   },
   {
-    metric: "Education",
+    metric: "Diplomas",
     value: "1",
   },
 ];

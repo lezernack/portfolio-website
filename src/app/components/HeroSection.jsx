@@ -9,8 +9,8 @@ const HeroSection = () => {
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sg:grid-cols-12">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
@@ -50,7 +50,12 @@ const HeroSection = () => {
             </span>
           </button>
         </div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-5 place-self-center mt-4 lg:mt-0"
+        >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/hero-image.png"
@@ -60,7 +65,7 @@ const HeroSection = () => {
               height={300}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
