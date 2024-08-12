@@ -30,7 +30,7 @@ const projectsData = [
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/lezernack/ReactJS_Recipe",
-    previewUrl: "/",
+    previewUrl: "https://react-js-recipe.vercel.app/",
   },
 ];
 
