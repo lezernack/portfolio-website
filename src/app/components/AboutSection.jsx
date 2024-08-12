@@ -59,10 +59,9 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
-            voluptatum odio hic magnam minus voluptas dicta! Rem et,
-            reprehenderit delectus voluptatem explicabo qui enim quaerat
-            perferendis. Explicabo nam sint similique.
+            I&apos;m currently a student learning web development. I am familiar
+            with React, JavaScript, HTML, and CSS. I love fixing problems, be
+            they coding or anything else.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

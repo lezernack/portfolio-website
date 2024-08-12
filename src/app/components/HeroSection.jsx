@@ -25,9 +25,7 @@ const HeroSection = () => {
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
-                1000,
-                "UI/UX Designer",
+                "React Developer",
                 1000,
               ]}
               wrapper="span"
@@ -36,8 +34,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-            pariatur voluptas.
+            I&apos;m currently
           </p>
         </motion.div>
         <div>
