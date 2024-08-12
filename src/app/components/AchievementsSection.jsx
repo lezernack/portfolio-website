@@ -17,16 +17,12 @@ const achievementsList = [
   },
   {
     prefix: "~",
-    metric: "users",
-    value: "10",
+    metric: "Coding Languages",
+    value: "3",
   },
   {
     metric: "Certificates",
     value: "3",
-  },
-  {
-    metric: "Diplomas",
-    value: "1",
   },
 ];
 
